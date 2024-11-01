@@ -1,6 +1,6 @@
 {
-    "name": "@muyajs/core",
-    "version": "0.0.32",
+    "name": "@langh/muya",
+    "version": "0.0.34",
     "description": "Core package for muya.",
     "author": "jocs <ransixi@gmail.com>",
     "license": "MIT",
@@ -8,8 +8,17 @@
         "markdown"
     ],
     "exports": {
-        ".": "./src/index.ts",
-        "./*": "./src/*"
+        ".": {
+            "types": "./lib/types/index.d.ts",
+            "import": "./lib/es/index.js",
+            "require": "./lib/cjs/index.js"
+        },
+        "./*": {
+            "types": "./lib/types/index.d.ts",
+            "import": "./lib/es/*",
+            "require": "./lib/cjs/*"
+        },
+        "./lib/*": "./lib/*"
     },
     "main": "./lib/cjs/index.js",
     "module": "./lib/es/index.js",
