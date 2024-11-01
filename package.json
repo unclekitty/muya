@@ -1,5 +1,5 @@
 {
-    "name": "muya",
+    "name": "@langh/muya",
     "type": "module",
     "version": "0.0.32",
     "packageManager": "pnpm@9.11.0",

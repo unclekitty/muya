@@ -142,6 +142,10 @@ muya.on('json-change', (_changes) => {
 //   console.log(JSON.stringify([anchor.offset, focus.offset, path]))
 // })
 
+muya.domNode.addEventListener('input', () => {
+    console.log('input');
+});
+
 const md2Html = new MarkdownToHtml(DEFAULT_MARKDOWN);
 md2Html.generate().then((_html) => {
     // const container = document.createElement("div");
